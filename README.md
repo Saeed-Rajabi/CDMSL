@@ -30,9 +30,8 @@ This project introduces **CDMSL (Conditional Diffusion Model for Sea Level)**, a
 cdmsl/
 ├── main.py
 ├── train.py
-├── infer.py
+├── inference.py
 ├── config.py
-├── utils_io.py
 ├── models/
 ├── diffusion/
 ├── data/

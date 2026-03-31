@@ -1,0 +1,28 @@
+import torch
+from torch.utils.data import Dataset
+
+
+class SSHDataset(Dataset):
+    def __init__(self, hr_ssh: torch.Tensor, lr_ssh: torch.Tensor, extra_conditions: torch.Tensor = None):
+        self.hr_ssh = hr_ssh
+        self.lr_ssh = lr_ssh
+        self.extra_conditions = extra_conditions
+
+        assert len(hr_ssh) == len(lr_ssh)
+        if extra_conditions is not None:
+            assert len(hr_ssh) == len(extra_conditions)
+
+    def __len__(self):
+        return len(self.hr_ssh)
+
+    def __getitem__(self, idx):
+        hr = torch.nan_to_num(self.hr_ssh[idx], nan=999.0)
+        lr = torch.nan_to_num(self.lr_ssh[idx], nan=999.0)
+
+        sample = {"hr": hr, "lr": lr}
+
+        if self.extra_conditions is not None:
+            cond = torch.nan_to_num(self.extra_conditions[idx], nan=999.0)
+            sample["conditions"] = cond
+
+        return sample

@@ -36,7 +36,6 @@ cdmsl/
 ├── diffusion/
 ├── data/
 ├── utils/
-└── outputs/
 
 
 ---

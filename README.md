@@ -75,4 +75,4 @@ Data: CC-BY 4.0
 
 If you use this work (model/codes), please cite:
 
-zenedo...
+Saeed-Rajabi. (2026). Saeed-Rajabi/CDMSL: CDMSL v1.1 (v2.0). Zenodo. https://doi.org/10.5281/zenodo.19351454

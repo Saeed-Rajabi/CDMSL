@@ -52,7 +52,7 @@ Zenodo archive (data + code):
 
 ---
 
-## Installation
+## Installation, Usage, Licence, Citation 
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/cdmsl.git
@@ -75,6 +75,6 @@ Data: CC-BY 4.0
 
 ## Citation
 
-If you use this work(model/codes), please cite:
+If you use this work (model/codes), please cite:
 
 zenedo...
